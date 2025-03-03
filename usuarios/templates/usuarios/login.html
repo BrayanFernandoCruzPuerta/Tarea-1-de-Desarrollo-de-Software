@@ -1,0 +1,15 @@
+<h2>Iniciar sesión</h2>
+
+<form method="post">
+    {% csrf_token %}
+    
+    <label for="{{ form.username.id_for_label }}">Usuario:</label>
+    {{ form.username }}
+
+    <label for="{{ form.password.id_for_label }}">Contraseña:</label>
+    {{ form.password }}
+
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+<a href="{% url 'registro' %}">¿No tienes cuenta? Regístrate aquí</a>
